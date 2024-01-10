@@ -4,20 +4,29 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
-    private Rigidbody rb;
-    private float speed = 6;
-
+    [Header("Turning")]
+    public float turnSpeed;
+    public float horizontalInput;
+    [Header("Shooting")]
+    public GameObject projectile;
+    public GameObject bulletSpawn;
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>(); 
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        //TURN
+        horizontalInput = Input.GetAxis("Horizontal");
+        transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime);
+        //SHOOT
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(projectile, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
+        }
     }
 }
