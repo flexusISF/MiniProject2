@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: 87c828cf941fb1b4c8c56658646b4ec6
+guid: 1f2d594cfa44b2340b0d0375d8991c96
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: arms Base Color
-    second: {fileID: 2800000, guid: 954b159e23254d941b58a9ca916df6dc, type: 3}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
